@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
 import './App.css'
+import { Routes, Route } from "react-router";
+import Homepage from "./pages/homepage";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-
-  return <h1>Hello World</h1>
-
+  return (
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/sign-up" element={<SignUp />} />
+    </Routes>
+  );
 }
 
 export default App;
